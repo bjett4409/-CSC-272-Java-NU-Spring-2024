@@ -4,11 +4,11 @@ import javax.swing.*;
 
 public class CircleDrawer extends JFrame {
 
-    private DrawingPanel drawingPanel; // Creating drawing panel
+    private DrawingPanel drawingPanel;
 
     public CircleDrawer() {
         setTitle("Circle Drawer");
-        setSize(800, 600); // Box side is 800 width 600 height
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -23,13 +23,13 @@ public class CircleDrawer extends JFrame {
         });
     }
 
-    private class DrawingPanel extends JPanel { // Setting the X axis, Y axis, and radius
+    private class DrawingPanel extends JPanel {
         private int circleX = -1;
         private int circleY = -1;
         private int radius = -1;
 
         public DrawingPanel() {
-            addMouseListener(new MouseAdapter() { // Introduces mouse listener
+            addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     circleX = e.getX();
