@@ -35,11 +35,17 @@ public class CircleDrawer extends JFrame {
                     circleX = e.getX();
                     circleY = e.getY();
                     String radiusStr = JOptionPane.showInputDialog("Enter the radius of the circle:");
-                    try {
-                        radius = Integer.parseInt(radiusStr);
-                        repaint();
-                    } catch (NumberFormatException ex) {
-                        JOptionPane.showMessageDialog(DrawingPanel.this, "Invalid input. Please enter a number.");
+                    if (radiusStr != null) {
+                        try {
+                            radius = Integer.parseInt(radiusStr);
+                            if (radius > 0) {
+                                repaint();
+                            } else {
+                                JOptionPane.showMessageDialog(DrawingPanel.this, "Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException ex) {
+                            JOptionPane.showMessageDialog(DrawingPanel.this, "Invalid input. Please enter a number.");
+                        }
                     }
                 }
             });
@@ -48,7 +54,7 @@ public class CircleDrawer extends JFrame {
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
-            if (radius > 0) {
+            if (circleX >= 0 && circleY >= 0 && radius > 0) {
                 g.setColor(Color.BLUE);
                 g.drawOval(circleX - radius, circleY - radius, radius * 2, radius * 2);
             }
