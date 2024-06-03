@@ -1,4 +1,6 @@
-// AppointmentCalendar.java
+// This section will convert the User Interface into calendar format
+// The format is converted to Year-4 digits, Month-2 digits, Day-2 digits
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

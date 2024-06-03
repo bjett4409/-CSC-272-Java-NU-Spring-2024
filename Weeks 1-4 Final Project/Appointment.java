@@ -1,12 +1,11 @@
-// Appointment.java
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Appointment {
-    private LocalDate date;
-    private LocalTime startTime;
-    private LocalTime endTime;
-    private String description;
+    private LocalDate date; // Appointment Date
+    private LocalTime startTime; // Appointment Start Time
+    private LocalTime endTime; // Appointment End Time
+    private String description; // Appointment Description
 
     public Appointment(LocalDate date, LocalTime startTime, LocalTime endTime, String description) {
         this.date = date;

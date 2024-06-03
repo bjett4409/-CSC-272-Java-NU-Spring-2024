@@ -1,3 +1,7 @@
+// This is the user interface portion of the program
+// The user will input the appointment dates and ensure they are annotated in the calendar
+// If there are any errors within the appointment will not be saved
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
